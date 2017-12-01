@@ -1,0 +1,83 @@
+nav 
+  border-bottom 2px solid $lightGrey
+  z-index 999
+  position relative
+
+  .container
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    background-color white
+
+  .nav
+
+    &-logo
+      width 12rem
+
+    &-menu
+      display flex
+      align-items center
+      justify-content right
+      
+      &-toggle
+        margin 1.25rem 0
+        display none
+        padding 1.25rem 1.5rem
+        border 1px solid $richBlack
+        user-select none
+
+        &:hover
+          cursor pointer
+
+        &-icon
+          display flex
+          flex-direction column
+          justify-content space-around
+          margin-left 1rem
+
+          &-bar
+            height 1px
+            background-color $richBlack
+            width 2rem
+
+      li
+        a
+          padding 2rem
+          display block
+          color $richBlack
+          user-select none
+
+          &:hover
+            background-color $lightGrey
+            text-decoration none
+
+@media(max-width: $breakpointSmall)
+  nav 
+
+    .nav
+
+      &-menu
+        position absolute
+        flex-direction column
+        width 100vw
+        margin 0 -2rem
+        top 100%
+        background-color white
+        transform translateY(-100%)
+        z-index -1
+        transition transform .3s
+
+        & li a
+          width 100vw
+          text-align center
+
+        &-toggle
+          display flex
+
+        &.active
+          transform translateY(0)
+          border-bottom 2px solid $lightGrey
+
+
+  
+
