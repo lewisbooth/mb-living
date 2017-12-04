@@ -1,1 +1,3 @@
-baguetteBox.run(".gallery");
+window.onload = function() {
+  baguetteBox.run(".gallery");
+};
