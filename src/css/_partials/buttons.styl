@@ -4,27 +4,44 @@
   line-height 1.5em
   height 1.25em // Vertically center text
   outline none
-  border 1px solid $richBlack
+  border 1px solid richBlack
   text-transform uppercase
   letter-spacing 0.2rem
-  display inline-block
-  color $richBlack
-  padding 1.25rem 1.75rem
-  box-sizing content-box
+  display inline-flex
+  align-items center
+  justify-content center
+  color richBlack
+  padding 2rem 1.75rem
+  box-sizing border-box
   margin 0 2.5rem 2.5rem 0
+  font-family montserrat
 
   &:hover
     text-decoration none
-    background-color $richBlack
+    background-color richBlackAccent
     color white
     cursor pointer
-    box-shadow 4px 4px 18px 0px rgba(0,0,0,0.1)
+
+  &-icon
+    max-height 2rem
+    max-width 2rem
+    float left
+    margin-right 1rem
+
+  &-gold
+    color white
+    border-color mbGold
 
   &-primary
-    background-color $primaryColor
-    border-color $primaryColor
+    background-color primaryColor
+    border-color primaryColor
     color white
 
     &:hover
-      background-color $primaryColorAccent
+      background-color primaryColorAccent
       color white
+
+  span
+    font-family montserrat
+    white-space nowrap
+    float right

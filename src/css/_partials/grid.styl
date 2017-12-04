@@ -1,26 +1,31 @@
 .container
   width 100%
   box-sizing border-box
-  max-width $breakpointLarge
+  max-width breakpointLarge
   margin 0 auto
-  padding 0 $containerPadding
-  position relative
+  padding 0 containerPadding
 
 .row, section
   width 100%
   clear both
 
 .grey
-  background-color $lightGrey
+  background-color lightGrey
 
 .primary
-  background-color $primaryColor
+  background-color primaryColor
 
 .no-margin
   margin 0 !important
 
 .no-padding
   padding 0 !important
+
+.no-padding-bottom
+  padding-bottom 0 !important
+
+.full-width
+  width 100%
 
 .centered
   margin 0 auto
@@ -31,6 +36,10 @@
   align-items center
   justify-content center
   text-align center
+
+.vertical-center-content
+  display flex
+  align-items center
 
 .space-between
   display flex
@@ -44,24 +53,42 @@
     align-items center
 
 .split
-  width calc(50% - $containerPadding)
+  width calc(50% - 1.5rem)
+  box-sizing border-box
 
   &-3
-    width calc(33.333% - $containerPadding)
+    width calc(33.333% - 1.5rem)
 
   &-4
-    width calc(25% - $containerPadding)
+    width calc(25% - 1.5rem)
 
   &-container
     display flex
     justify-content space-between
     flex-wrap wrap
 
-@media(max-width: $breakpointSmall)
-  .container
-    padding 0 ($containerPadding / 2)
+  .contain
+    max-width calc(400px)
+    padding 0 0 0 (containerPadding / 2)
+    box-sizing border-box
+    float right
+
+  &.vertical-center-content:first-child
+    justify-content right
+
+@media(max-width: breakpointSmall)
 
   .split
     width 100%
+    padding-right 0
+
+    &-3 
+      width 100%
+
+    &-4 
+      width 100%
+
+  .container
+    padding 0 (containerPadding / 2)
 
   

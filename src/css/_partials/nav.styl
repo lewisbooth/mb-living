@@ -1,18 +1,28 @@
+// Nav offset
+body
+  padding-top 7.8rem
+
 nav 
-  border-bottom 2px solid $lightGrey
+  border-bottom 2px solid mbGold
   z-index 999
-  position relative
+  position fixed
+  top 0
+  width 100%
+  font-size 1.6rem
 
   .container
     display flex
     justify-content space-between
-    flex-wrap wrap
-    background-color white
+    align-items center
+    flex-wrap wrap 
 
   .nav
 
     &-logo
-      width 12rem
+      width 24rem
+      max-width 60%
+      color white
+      margin-bottom 1rem
 
     &-menu
       display flex
@@ -20,10 +30,11 @@ nav
       justify-content right
       
       &-toggle
-        margin 1.25rem 0
         display none
+        align-items center
+        margin 1.25rem 0
         padding 1.25rem 1.5rem
-        border 1px solid $richBlack
+        border 1px solid mbGold
         user-select none
 
         &:hover
@@ -32,26 +43,28 @@ nav
         &-icon
           display flex
           flex-direction column
-          justify-content space-around
-          margin-left 1rem
+          margin-left 1.5rem
 
           &-bar
             height 1px
-            background-color $richBlack
+            background-color white
             width 2rem
+            margin 0.3rem 0
+            transition all .3s
 
       li
         a
-          padding 2rem
+          padding 2.5rem 1.5rem
           display block
-          color $richBlack
+          color white
           user-select none
+          font-family montserrat
 
           &:hover
-            background-color $lightGrey
+            background-color richBlackAccent
             text-decoration none
 
-@media(max-width: $breakpointSmall)
+@media(max-width: breakpointSmall)
   nav 
 
     .nav
@@ -62,22 +75,29 @@ nav
         width 100vw
         margin 0 -2rem
         top 100%
-        background-color white
         transform translateY(-100%)
         z-index -1
         transition transform .3s
+        will-change transform
 
         & li a
           width 100vw
           text-align center
+          background-color richBlack
 
         &-toggle
           display flex
 
-        &.active
-          transform translateY(0)
-          border-bottom 2px solid $lightGrey
+    &.active
 
+      .nav-menu
+        transform translateY(0)
+        border-bottom 2px solid mbGold
 
-  
-
+      .nav-menu-toggle-icon-bar
+        &:first-child
+          transform translateY(6.5px) rotate(45deg)
+        &:nth-child(2)
+          opacity 0
+        &:last-child
+          transform translateY(-6.5px) rotate(-45deg)

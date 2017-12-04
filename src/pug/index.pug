@@ -1,7 +1,166 @@
 extends _partials/layout
 
+block title
+  title High Quality Modern Homes in Staffordshire & Cheshire | MB Living
+  meta(name="description" content="MB Living are outstanding UK property developers with an established reputation throughout Staffordshire and Cheshire for their construction of high quality family homes.")
+
 block content
-  .container
-    h3 Minimal Responsive Boilerplate
-    a(href="/").button.button-primary Primary button
-    a(href="/").button Fork on Github
+  .swiper.top-swiper
+    .swiper-container
+      .swiper-wrapper
+        .swiper-slide(style="background-image: url('/images/home-slider/twin-detached-houses-front.jpg');")
+        .swiper-slide(style="background-image: url('/images/home-slider/orchard-manor-bathroom.jpg');")
+        .swiper-slide(style="background-image: url('/images/home-slider/detached-house-balcony.jpg');")
+        .swiper-slide(style="background-image: url('/images/home-slider/orchard-manor-kitchen.jpg');")
+        .swiper-slide(style="background-image: url('/images/home-slider/orchard-manor-detached.jpg');")
+      .swiper-pagination
+      .swiper-button-next
+      .swiper-button-prev
+    .swiper-overlay
+      .h2-flourishes.container
+        .flourish
+        h2 Luxury Property #[br.mobile-break] Developments
+        .flourish
+      h1 Building Homes #[br.mobile-break] for Your Future
+
+  section.dark-pattern.gold-border.introduction
+    .container
+      .split-container
+        .split
+          h3 We build #[em.gold quality] modern homes in Staffordshire and Cheshire.
+        .split
+          p With 25 years experience in construction &amp; property development, MB Living is dedicated to providing modern, elegant homes built by experienced local craftsmen with careful attention to detail.
+          a.button.button-gold.no-margin Speak to us today
+
+  section#about.no-padding-bottom
+    .container
+      .h2-flourishes.container
+        .flourish
+        h2 About Us
+        .flourish
+      .split-container.about-us-background
+        .split
+          p MB Living are outstanding UK developers with an established reputation throughout Staffordshire and Cheshire for their construction of high quality family homes. We build a broad range of individually designed homes from contemporary style apartments, to more traditional two and three storey homes.
+          p At MB Living, we are continually seeking and identifying new land opportunities in sought-after areas, to allow us to create new luxury homes and properties, and continue to offer our purchasers the ultimate in quality, style, comfort, practicality, innovation and beauty.
+        .split
+          p We are renowned for our attention to detail and for producing designer new homes that sit very comfortably in their surroundings, complementing and enhancing the local area.
+          p Our current new homes in Staffordshire and Cheshire combine practical features, innovative design and stylish finishes. Whether it is an ultra-modern apartment in a town centre or a traditional style executive home in the country, an MB Living home is always distinctive and desirable.
+  section#developments
+    .container
+      .h2-flourishes.container
+        .flourish
+        h2 Current Developments
+        .flourish
+      .split-container
+        .split
+          .property-card
+            .swiper.orchard-manor-swiper
+              .swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src="/images/properties/orchard-manor/orchard-manor-front.jpg" alt="Twin Detached Rear")
+                  .swiper-slide
+                    img(src="/images/properties/orchard-manor/orchard-manor-bathroom.jpg" alt="Twin Detached Rear")
+                  .swiper-slide
+                    img(src="/images/properties/orchard-manor/orchard-manor-kitchen.jpg" alt="Twin Detached Rear")
+                  .swiper-slide
+                    img(src="/images/properties/orchard-manor/orchard-manor-garden.jpg" alt="Twin Detached Rear")
+                  .swiper-slide
+                    img(src="/images/properties/orchard-manor/orchard-manor-stairwell.jpg" alt="Twin Detached Rear")
+                  .swiper-slide
+                    img(src="/images/properties/orchard-manor/orchard-manor-kitchen-2.jpg" alt="Twin Detached Rear")
+                  .swiper-slide
+                    img(src="/images/properties/orchard-manor/orchard-manor-stairwell-2.jpg" alt="Twin Detached Rear")
+                .swiper-pagination
+                .swiper-button-next
+                .swiper-button-prev
+            .property-card-info
+              img.property-card-info-logo(src='/images/logo/logo-main.svg' alt='MB Living logo')
+              h4 Orchard Manor
+              h6 Congleton
+              a.button.button-gold.no-margin.full-width(href="http://www.rightmove.co.uk/property-for-sale/property-57954182.html")
+                img.button-icon(src="/images/icons/map-pin.svg")
+                span View on Rightmove
+
+        .split
+          .property-card
+            .swiper
+              .swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src="/images/properties/coming-soon.png" alt="Coming Soon")
+            .property-card-info
+              img.property-card-info-logo(src='/images/logo/logo-main.svg' alt='MB Living logo')
+              h4 Pride of Moorlands
+              h6 Leek
+              .button.button-gold.no-margin.full-width(href="#")
+                img.button-icon(src="/images/icons/map-pin.svg")
+                span Coming Soon
+  section#gallery.dark-pattern.gold-border
+    .h2-flourishes.container
+      .flourish
+      h2 Gallery
+      .flourish
+    .gallery
+      a.gallery-image(href="images/gallery/1500/twin-detached-rear.jpg")
+        img(src="images/gallery/thumbs/twin-detached-rear.jpg" alt="Twin Detached Rear")
+      a.gallery-image(href="images/gallery/1500/orchard-manor-bathroom.jpg")
+        img(src="images/gallery/thumbs/orchard-manor-bathroom.jpg" alt="Orchard Manor Bathroom")
+      a.gallery-image(href="images/gallery/1500/orchard-manor-stairwell.jpg")
+        img(src="images/gallery/thumbs/orchard-manor-stairwell.jpg" alt="Orchard Manor Stairwell")
+      a.gallery-image(href="images/gallery/1500/window-detail.jpg")
+        img(src="images/gallery/thumbs/window-detail.jpg" alt="Window Detail")
+      a.gallery-image(href="images/gallery/1500/orchard-manor-front.jpg")
+        img(src="images/gallery/thumbs/orchard-manor-front.jpg" alt="Orchard Manor Front")
+      a.gallery-image(href="images/gallery/1500/twin-detached-balcony.jpg")
+        img(src="images/gallery/thumbs/twin-detached-balcony.jpg" alt="Twin Detached Balcony")
+      a.gallery-image(href="images/gallery/1500/church-view-terrace.jpg")
+        img(src="images/gallery/thumbs/church-view-terrace.jpg" alt="Church View Terrace")
+      a.gallery-image(href="images/gallery/1500/apartment-building.jpg")
+        img(src="images/gallery/thumbs/apartment-building.jpg" alt="Apartment Building")
+      a.gallery-image(href="images/gallery/1500/orchard-manor-kitchen.jpg")
+        img(src="images/gallery/thumbs/orchard-manor-kitchen.jpg" alt="Orchard Manor Kitchen")
+      a.gallery-image(href="images/gallery/1500/twin-detached-front.jpg")
+        img(src="images/gallery/thumbs/twin-detached-front.jpg" alt="Twin Detached Front")
+      a.gallery-image(href="images/gallery/1500/stairwell.jpg")
+        img(src="images/gallery/thumbs/stairwell.jpg" alt="Stairwell")
+      a.gallery-image(href="images/gallery/1500/orchard-manor-garden.jpg")
+        img(src="images/gallery/thumbs/orchard-manor-garden.jpg" alt="Orchard Manor Garden")
+
+  section#testimonials.dark-pattern.gold-border
+    .h2-flourishes.container
+      .flourish
+      h2 Testimonials
+      .flourish
+    .container
+      .split-container
+        .split-3
+          .testimonial
+            p “My husband and I couldn’t be happier with our home, we moved in two weeks earlier than planned and everything is built perfectly for our family.”
+            h6 Sharon Jackson
+        .split-3
+          .testimonial
+            p “The MB Living team were extremely helpful throughout the build process… they offered help and support far beyond my expectations.”
+            h6 Michael Cooke
+        .split-3
+          .testimonial
+            p “I was impressed with the craftsmanship of the house and would be happy to recommend MB Living to anybody who needs a home built to high standards.”
+            h6 Ryan Powell
+      .center-content
+        a.button.button-gold.no-margin(href="/contact") Get in Touch
+
+block pageCSS
+  style
+    include ../../dist/css/swiper.min.css
+    include ../../dist/css/baguetteBox.min.css
+
+block pageScripts
+  //- SwiperJS for top slider and property listings
+  script
+    include ../../dist/js/swiperInit.min.js
+  script(async src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js" onload="initSwiper()")
+  //- Lightbox
+  script
+    include ../../dist/js/baguetteBox.min.js
+  script
+    include ../../dist/js/baguetteBoxInit.min.js

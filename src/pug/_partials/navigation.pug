@@ -1,7 +1,8 @@
 mixin navigation
-  nav
-    .container
-      img(src='/images/logo-main.svg' alt='Main logo').nav-logo
+  nav.dark-pattern
+    .container.dark-pattern
+      a(href="/").nav-logo
+        img(src='/images/logo/logo-main.svg' alt='MB Living logo')
       .nav-menu-toggle Menu
         .nav-menu-toggle-icon
           .nav-menu-toggle-icon-bar
@@ -9,8 +10,12 @@ mixin navigation
           .nav-menu-toggle-icon-bar
       ul.nav-menu(aria-expanded="false")
         li 
-          a(href="/") Home
+          a(href="/#about" data-scroll="#about").scroll About
         li 
-          a(href="/about") About
+          a(href="/#developments").scroll Developments
+        li 
+          a(href="/#gallery").scroll Gallery
+        li 
+          a(href="/#testimonials").scroll Testimonials
         li 
           a(href="/contact") Contact
