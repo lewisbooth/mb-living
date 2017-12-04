@@ -39,6 +39,7 @@
 
 .vertical-center-content
   display flex
+  flex-direction row-reverse
   align-items center
 
 .space-between
@@ -68,13 +69,11 @@
     flex-wrap wrap
 
   .contain
-    max-width calc(400px)
+    max-width 400px
     padding 0 0 0 (containerPadding / 2)
     box-sizing border-box
-    float right
 
-  &.vertical-center-content:first-child
-    justify-content right
+
 
 @media(max-width: breakpointSmall)
 
