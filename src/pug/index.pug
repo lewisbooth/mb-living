@@ -162,9 +162,9 @@ block pageCSS
 
 block pageScripts
   //- SwiperJS for top slider and property listings
+  script(async src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js" onload="initSwiper()")
   script
     include ../../dist/js/swiperInit.min.js
-  script(async src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js" onload="initSwiper()")
   //- Lightbox
   script
     include ../../dist/js/baguetteBox.min.js
