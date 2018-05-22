@@ -58,19 +58,19 @@ block content
               .swiper-container
                 .swiper-wrapper
                   .swiper-slide
-                    img(src="/images/properties/orchard-manor/orchard-manor-front.jpg" alt="Twin Detached Rear")
+                    img(src="/images/properties/orchard-manor/orchard-manor-front.jpg" alt="Orchard Manor Front")
                   .swiper-slide
-                    img(src="/images/properties/orchard-manor/orchard-manor-bathroom.jpg" alt="Twin Detached Rear")
+                    img(src="/images/properties/orchard-manor/orchard-manor-bathroom.jpg" alt="Orchard Manor Bathroom")
                   .swiper-slide
-                    img(src="/images/properties/orchard-manor/orchard-manor-kitchen.jpg" alt="Twin Detached Rear")
+                    img(src="/images/properties/orchard-manor/orchard-manor-kitchen.jpg" alt="Orchard Manor Kitchen")
                   .swiper-slide
-                    img(src="/images/properties/orchard-manor/orchard-manor-garden.jpg" alt="Twin Detached Rear")
+                    img(src="/images/properties/orchard-manor/orchard-manor-garden.jpg" alt="Orchard Manor Garden")
                   .swiper-slide
-                    img(src="/images/properties/orchard-manor/orchard-manor-stairwell.jpg" alt="Twin Detached Rear")
+                    img(src="/images/properties/orchard-manor/orchard-manor-stairwell.jpg" alt="Orchard Manor Stairwell")
                   .swiper-slide
-                    img(src="/images/properties/orchard-manor/orchard-manor-kitchen-2.jpg" alt="Twin Detached Rear")
+                    img(src="/images/properties/orchard-manor/orchard-manor-kitchen-2.jpg" alt="Orchard Manor Kitchen")
                   .swiper-slide
-                    img(src="/images/properties/orchard-manor/orchard-manor-stairwell-2.jpg" alt="Twin Detached Rear")
+                    img(src="/images/properties/orchard-manor/orchard-manor-stairwell-2.jpg" alt="Orchard Manor Stairwell")
                 .swiper-pagination
                 .swiper-button-next
                 .swiper-button-prev
@@ -84,15 +84,33 @@ block content
 
         .split
           .property-card
-            .swiper
+            .swiper.corona-park-swiper
               .swiper-container
-                .swiper-wrapper
+                .swiper-wrapper.gallery
                   .swiper-slide
-                    img(src="/images/properties/coming-soon.png" alt="Coming Soon")
+                    a.gallery-image(href="/images/properties/corona-park/corona-park-front-large.jpg")
+                      img(src="/images/properties/corona-park/corona-park-front.jpg" alt="Corona Park Front View")
+                  .swiper-slide
+                    a.gallery-image(href="/images/properties/corona-park/corona-park-landscape-large.png")
+                      img(src="/images/properties/corona-park/corona-park-landscape.png" alt="Corona Park Landscape")
+                  .swiper-slide
+                    a.gallery-image(href="/images/properties/corona-park/corona-park-floor-plan-large.png")
+                      img(src="/images/properties/corona-park/corona-park-floor-plan.png" alt="Corona Park Floor Plan")
+                  .swiper-slide
+                    a.gallery-image(href="/images/properties/corona-park/corona-park-sign-2-large.jpg")
+                      img(src="/images/properties/corona-park/corona-park-sign-2.jpg" alt="Corona Park Sign 2")
+                  .swiper-slide
+                    a.gallery-image(href="/images/properties/corona-park/corona-park-sign-1-large.png")
+                      img(src="/images/properties/corona-park/corona-park-sign-1.png" alt="Corona Park Sign")
+                .swiper-pagination
+                .swiper-button-next
+                .swiper-button-prev
             .property-card-info
-              img.property-card-info-logo(src='/images/logo/logo-main.svg' alt='MB Living logo')
-              h4 Pride of Moorlands
-              h6 Leek
+              .space-between
+                img.property-card-info-logo(src='/images/logo/logo-main.svg' alt='MB Living logo')
+                p.property-card-info-price from £149,950
+              h4 Corona Park
+              h6 Chesterton
               .button.button-gold.no-margin.full-width
                 img.button-icon(src="/images/icons/map-pin.svg" alt="Map Pin Icon")
                 span Coming Soon
