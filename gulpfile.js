@@ -19,7 +19,7 @@ gulp.task("pug", function () {
 
 gulp.task("pug-build", function () {
   return gulp
-    .src("src/pug/*.pug")
+    .src(["src/pug/**/*.pug", "!src/pug/_partials/**/*.pug"])
     .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest("dist"))
@@ -35,7 +35,7 @@ gulp.task("compile-scripts", function () {
 })
 
 gulp.task("scripts", gulp.series("compile-scripts"), function () {
-  browserSync.reload({ stream: true })
+  browserSync.reload()
 })
 
 gulp.task("stylus", function () {
@@ -49,12 +49,12 @@ gulp.task("stylus", function () {
     .pipe(stylus())
     .pipe(postcss(plugins))
     .pipe(gulp.dest("dist/css"))
-    .pipe(browserSync.reload({ stream: true }))
+    .pipe(browserSync.stream())
 })
 
-gulp.task("build", gulp.series("stylus", "scripts", "pug-build"))
+gulp.task("build", gulp.series("stylus", "compile-scripts", "pug-build"))
 
-gulp.task("dev", gulp.series("stylus", "scripts", "pug"), function () {
+gulp.task("dev", gulp.series("stylus", "scripts", "pug", function () {
   browserSync.init({
     server: {
       baseDir: "./dist",
@@ -68,6 +68,6 @@ gulp.task("dev", gulp.series("stylus", "scripts", "pug"), function () {
   gulp.watch("src/js/**/*.js", gulp.series("scripts", "pug"))
   gulp.watch("src/pug/**/*.pug", gulp.series("pug"))
   gulp.watch("dist/**/*.*").on("change", browserSync.reload)
-})
+}))
 
 gulp.task("default", gulp.series("dev"))
