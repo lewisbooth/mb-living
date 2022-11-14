@@ -29,7 +29,7 @@ gulp.task("compile-scripts", function () {
   return gulp
     .src("src/js/**/*.js")
     .pipe(plumber())
-    .pipe(babel({ presets: ["env"] }))
+    .pipe(babel({ presets: ["@babel/preset-env"] }))
     .pipe(minify())
     .pipe(gulp.dest("dist/js"))
 })
@@ -40,7 +40,7 @@ gulp.task("scripts", gulp.series("compile-scripts"), function () {
 
 gulp.task("stylus", function () {
   var plugins = [
-    autoprefixer({ browsers: ["last 3 versions"] }),
+    autoprefixer(),
     cssnano({ discardUnused: false })
   ]
   return gulp

@@ -15,19 +15,25 @@
   "bugs": {
     "url": "https://github.com/lewisbooth/mb-living/issues"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "homepage": "https://github.com/lewisbooth/mb-living#readme",
   "dependencies": {
-    "autoprefixer": "^7.2.6",
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.13",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.26.5",
-    "cssnano": "^3.10.0",
-    "gulp": "^4.0.0",
-    "gulp-babel": "^7.0.1",
+    "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.14",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^7.0.1",
-    "gulp-pug": "^3.3.0",
-    "gulp-stylus": "^2.7.0",
-    "gulp-uglify": "^3.0.1"
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-stylus": "^2.7.1",
+    "gulp-uglify": "^3.0.2",
+    "postcss": "^8.4.19"
   }
 }
