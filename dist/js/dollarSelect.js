@@ -1,1 +1,0 @@
-"use strict";const $=e=>document.querySelector(e),$$=e=>document.querySelectorAll(e);

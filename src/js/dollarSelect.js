@@ -1,2 +1,2 @@
-const $ = e => document.querySelector(e)
-const $$ = e => document.querySelectorAll(e)
+export const $ = selector => document.querySelector(selector)
+export const $$ = selector => document.querySelectorAll(selector)

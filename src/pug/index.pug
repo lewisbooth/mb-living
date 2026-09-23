@@ -316,15 +316,10 @@ block content
 
 block pageCSS
   style
-    include ../../dist/css/swiper.min.css
-    include ../../dist/css/baguetteBox.min.css
+    include ../static/css/swiper.min.css
+    include ../static/css/baguetteBox.min.css
 
 block pageScripts
-  //- SwiperJS for top slider and property listings
-  script(async src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js" onload="initSwiper()")
-  script
-    include ../../dist/js/swiperInit.min.js
-  //- Lightbox
-  script
-    include ../../dist/js/baguetteBox.min.js
-    include ../../dist/js/baguetteBoxInit.min.js
+  script(src="/js/swiper.min.js")
+  script(src="/js/baguetteBox.min.js")
+  script(type="module" src="/js/home.js")

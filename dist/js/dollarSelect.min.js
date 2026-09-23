@@ -1,1 +1,0 @@
-"use strict";function $(e){if("string"==typeof e)return document.querySelector(e);console.error("Invalid parameter type, requires String")}function $$(e){if("string"==typeof e)return document.querySelectorAll(e);console.error("Invalid parameter type, requires String")}

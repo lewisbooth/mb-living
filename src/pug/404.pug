@@ -1,0 +1,17 @@
+extends _partials/layout
+
+block title
+  title Page Not Found | MB Living
+  meta(name="description" content="The page you requested could not be found. Return to MB Living or contact us.")
+
+block content
+  section.not-found.dark-pattern.gold-border
+    .container
+      .h2-flourishes.container
+        .flourish
+        h1 Page Not Found
+        .flourish
+      p Sorry, we couldn't find that page. It may have moved, or the address may be incorrect.
+      .not-found-actions
+        a.button.button-gold(href="/") Back to Home
+        a.button.button-gold(href="/contact") Contact Us

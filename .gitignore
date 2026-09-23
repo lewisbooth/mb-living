@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Vite output and generated Pug entry pages
+/dist/
+/src/*.html
+.wrangler/
+.dev.vars*

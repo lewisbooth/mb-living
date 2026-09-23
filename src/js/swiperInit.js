@@ -1,4 +1,4 @@
-function initSwiper() {
+export function initSwiper() {
   var topSwiper = new Swiper(".top-swiper .swiper-container", {
     speed: 600,
     loop: true,
