@@ -46,3 +46,18 @@ Connect the existing repository to a Cloudflare Worker using:
 After `npm ci`, `npm run deploy` builds and deploys manually. The Worker URL
 can be checked before moving any production DNS. This repository does not
 configure a custom domain or change `mbliving.co.uk` DNS.
+
+### Branch previews
+
+In the Worker dashboard, enable **Preview Builds** under **Settings > Builds >
+Branch control** and use `npx wrangler preview` as the Preview command. Leave
+the Builds build command blank: Wrangler performs the same `npm run build` for
+both production and previews. The empty `previews` block in `wrangler.jsonc`
+is required even for this static site, which has no separate secrets or data
+bindings. The `preview_urls` setting enables its `workers.dev` preview host.
+
+Work on a dedicated branch, push commits, then open a pull request into `main`.
+Each push updates that branch's stable Preview URL; each deployment also has
+an immutable URL for reviewing that exact build. Merging into `main` triggers
+the production deployment. Preview builds do not change production DNS or
+promote the branch to the production Worker.
