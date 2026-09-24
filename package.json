@@ -5,10 +5,10 @@
   "description": "MB Living static site built from Pug, Stylus and Vite",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/version-assets.mjs",
     "preview": "vite preview",
     "verify": "node scripts/verify-build.mjs",
-    "deploy": "wrangler deploy"
+    "deploy": "npm run build && wrangler deploy"
   },
   "engines": {
     "node": ">=24.0.0 <25"
